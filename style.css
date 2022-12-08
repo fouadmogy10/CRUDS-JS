@@ -1,0 +1,145 @@
+:root {
+    --body-color: #222;
+    --font-color: #fff; 
+    --input-bg: #111;
+    --input-bg-foucs: #000;
+    --btn-blue: #008CBA;
+    --btn-blue-light: #00afe8;
+    --btn-green: #4CAF50;
+    --btn-green-light: #5df063;
+    --btn-red: #f44336;
+    --btn-red-light: #ff6054;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--body-color);
+    color: var(--font-color);
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+}
+input {
+    width: 100%;
+    height: 30px;
+    background-color: var(--input-bg);
+    margin: 5px 0px;
+    padding: 5px;
+    color: var(--font-color);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    transition: all .5s;
+}
+input:focus {
+    background-color: var(--input-bg-foucs);
+    transform: scale(1.1);
+}
+::placeholder,
+button,
+small {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+}
+button {
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    color: #fff;
+    transition: all .4s ease-in-out;margin: 10px auto;
+}
+button:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    letter-spacing: 2px;
+}
+button:focus {
+    outline: none;
+}
+/* Container Style */
+.crud-container {
+    width: 80%;
+    margin: auto;
+}
+/* Start Styling Heading Section */
+.heading {
+    margin: 10px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    word-spacing: 5px;
+}
+/* Ending Heading Section Style */
+/* Start Styling Input Section */
+.price input {
+    width: calc(100% / 5);
+}
+#total {
+    width: 100%;
+    background-color: var(--btn-red);
+    height: 30px;
+    line-height: 30px;
+    padding: 4px 2px;
+    border-radius: 4px;
+}
+#total::before {
+    content: 'Total: ';
+}
+/* Ending Input Section Style  */
+/* Start Styling Output Section */
+.search-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.search-btn button {
+    width: 45%;
+}
+.deleteAll {
+    margin: 7px 0px;
+}
+table {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+table button#update {
+    background-color: var(--btn-green);
+}
+table button#update:hover {
+    background-color: var(--btn-green-light);
+    letter-spacing: 1px;
+}
+table button#delete {
+    background-color: var(--btn-red);
+}
+table button#delete:hover {
+    background-color: var(--btn-red-light);
+    letter-spacing: 1px;
+}
+table th {
+    text-transform: uppercase;
+}
+table th,
+table td {
+    padding: 5px;
+}
+@media only screen and (max-width: 768px) {
+    table th,td {
+        padding: 2px;
+        font-size: 10px;
+    }
+    }
+/* Ending Output Section Style */

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS | Product Management System</title>
+    <!-- linking CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- linking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start Container -->
+    <main class="crud-container">
+        <!-- Start Heading Section -->
+        <section class="heading">
+            <h2>CRUDS</h2>
+            <p>Product Management System</p>
+        </section>
+        <!-- Ending Heading Section -->
+        <!-- Start Input Section -->
+        <section class="input">
+            <input type="text" placeholder="Title" id="title">
+            <div class="price">
+                <input type="number" onkeyup="get_total()" placeholder="Price" id="price">
+                <input type="number" onkeyup="get_total()" placeholder="Taxes" id="taxes">
+                <input type="number" onkeyup="get_total()" placeholder="Ads" id="ads">
+                <input type="number" onkeyup="get_total()" placeholder="Discount" id="discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" placeholder="Count" id="count">
+            <input type="text" placeholder="Category" id="category">
+            <button id="submit">Create</button>
+        </section>
+        <!-- Ending Input Section -->
+        <!-- Start Output Section -->
+        <section class="output">
+            <div class="search-section">
+                <input type="text" placeholder="Search" id="search" onkeyup="searchFunc(this.value)">
+                <div class="search-btn">
+                    <button id="searchTitle" onclick="getSearchMode(this.id)">Search By Title</button>
+                    <button id="searchCategory" onclick="getSearchMode(this.id)">Search By Category</button>
+                </div>
+            </div>
+            <div id="deleteAll" class="deleteAll">
+                <!-- button to delete all items -->
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </section>
+        <!-- Ending Output Section -->
+    </main>
+    <!-- End Container -->
+    <!-- linking JavaScript file -->
+    <script src="main.js"></script>
+</body>
+</html>
